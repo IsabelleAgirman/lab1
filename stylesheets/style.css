@@ -1,0 +1,27 @@
+body{
+    background-color: aliceblue;
+}
+
+.wrapper{
+
+}
+
+nav{
+    background-color: #a8c3ff;
+    margin: 10px 0;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+}
+
+
+ul li a{
+    display: block;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
