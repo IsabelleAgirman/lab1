@@ -3,8 +3,14 @@ body{
 }
 
 .wrapper{
-
+    
 }
+h1{font-size: 3em;}
+
+h2{font-size: 2em;}
+
+h3{font-size: 1.5em;}
+p{font-size: 1.3em;}
 
 nav{
     background-color: #a8c3ff;
@@ -12,14 +18,14 @@ nav{
     border-radius: 10px;
 }
 
-ul{
+nav ul{
     display: flex;
     list-style-type: none;
     justify-content: center;
 }
 
 
-ul li a{
+nav ul li a{
     display: block;
     text-align: center;
     padding: 10px 12px;
@@ -35,9 +41,15 @@ nav a:hover{
 
 main{}
 
+.about img{
+    border-radius: 40px;
+}
+
+
 table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
   text-align: center;
   padding: 5px 10px;
+  font-size: 1.3rem;
 }
