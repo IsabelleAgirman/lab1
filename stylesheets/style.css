@@ -83,6 +83,10 @@ table, th, td {
     gap: 15px;
 }
 
+#intrest ul{
+    font-size: 1.3em;
+}
+
 fieldset{
     border-color: #a8c3ff;
     border-radius: 20px;
