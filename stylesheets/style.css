@@ -53,3 +53,23 @@ table, th, td {
   padding: 5px 10px;
   font-size: 1.3rem;
 }
+
+fieldset{
+    border-color: #a8c3ff;
+    border-radius: 20px;
+    background-color: #e8efff;
+}
+
+#subBtn{
+    background-color: #a8c3ff;
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: #6c9aff36;
+}
+
+#subBtn:hover{
+    background-color: #6c9aff;
+    color: white;
+}
