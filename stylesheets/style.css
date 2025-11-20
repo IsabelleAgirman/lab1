@@ -3,14 +3,23 @@ body{
 }
 
 .wrapper{
-    
+    margin: 10px 20px;
 }
 h1{font-size: 3em;}
 
-h2{font-size: 2em;}
+h2{
+    font-size: 2em;
+    margin: 30px 20px 20px;
+}
 
-h3{font-size: 1.5em;}
-p{font-size: 1.3em;}
+h3{
+    font-size: 1.5em;
+    margin:  15px 20px;
+}
+p{
+    font-size: 1.3em;
+    margin: 10px 20px;
+}
 
 nav{
     background-color: #a8c3ff;
@@ -41,7 +50,7 @@ nav a:hover{
 
 main{}
 
-.about img{
+#about img{
     border-radius: 40px;
 }
 
@@ -58,6 +67,22 @@ fieldset{
     border-color: #a8c3ff;
     border-radius: 20px;
     background-color: #e8efff;
+}
+
+
+#Name, #eMail{
+    font-size: 1em;
+    padding: 2px 10px;
+    margin-top: 10px;
+}
+
+#Message{
+    line-height: 3;
+    width: 240px;
+    height: 100px;
+    padding: 2px 10px;
+    font-size: 1em;
+    margin: 10px 0;
 }
 
 #subBtn{
