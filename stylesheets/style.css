@@ -87,6 +87,18 @@ table, th, td {
     font-size: 1.3em;
 }
 
+.hobbies-pic{
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    gap: 40px;
+}
+
+.hobbies-pic img{
+    border-radius: 15px;
+    box-shadow: 5px 6px 10px #616161;
+}
+
 fieldset{
     border-color: #a8c3ff;
     border-radius: 20px;
