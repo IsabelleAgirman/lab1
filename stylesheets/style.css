@@ -123,6 +123,17 @@ table, th, td {
 .hobbies-pic img{
     border-radius: 15px;
     box-shadow: 5px 6px 10px #616161;
+
+}
+
+.hobbies-pic figure {
+    text-align: center;
+}
+
+.hobbies-pic figcaption {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    color: #2a2a2a;
 }
 
 fieldset{
