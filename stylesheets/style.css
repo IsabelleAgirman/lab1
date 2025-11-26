@@ -6,7 +6,22 @@ body{
 .wrapper{
     margin: 10px 20px;
 }
-h1{font-size: 3em;}
+h1{
+    font-size: 3em;
+    font-family: cursive;
+    font-variant: petite-caps;
+    animation: slide-in 1000ms; /*slides in 1 sek*/
+}
+
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%); /*Starts outside screen*/
+    }
+    to {
+      transform: translateX(0%); /*goes to original place*/
+    }
+  }
+
 
 h2{
     font-size: 2em;
@@ -167,3 +182,81 @@ footer{
     text-decoration: underline;
     
 }
+
+
+/**************** responsive design ***********************/
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin: 30px 20px 10px;
+    }
+
+    p {
+    font-size: 1.1rem;
+    }
+
+    nav ul li a{
+        font-size: 1.19em;
+    }
+
+    #about img{
+        display: flex;
+        justify-self: center;
+    }
+    .about-layout{
+        display: inline-block;
+    }
+
+    .place-right{
+        margin-top: 30px;
+    }
+
+    #intrest ul {
+        font-size: 1.1rem;
+    }
+
+   .hobbies-pic {
+        flex-wrap: wrap;
+    }
+
+    .hobbies-pic img{
+        width: 100%;
+        justify-self: anchor-center;
+    } 
+
+    .footer-info a {
+        font-size: 1.1rem;
+    }
+
+    fieldset p{
+        margin: 20px;
+    }
+
+    #Message{
+        width: 270px;
+    }
+
+    .footer-info {
+        display: grid;
+        justify-items: center;
+    }
+
+}
+
+@media (max-width: 1150px) and (min-width:550px){
+        
+    .hobbies-pic {
+        flex-wrap: wrap;
+    }
+
+    .hobbies-pic img{
+        /* width: 100%; */
+        justify-self: anchor-center;
+    }
+}
+    
