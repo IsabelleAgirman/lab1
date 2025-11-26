@@ -131,6 +131,9 @@ fieldset{
     background-color: #e8efff;
 }
 
+input:focus, #Message:focus {
+  background-color: #c9c9c9;
+}
 
 #Name, #eMail{
     font-size: 1em;
