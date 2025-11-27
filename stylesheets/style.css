@@ -109,15 +109,17 @@ table, th, td {
     gap: 15px;
 }
 
+.place-right h2{
+    margin-top: 0; /*put 0 on top so it will be the same hight as image*/
+}
+
 #intrest ul{
     font-size: 1.3em;
 }
 
 .hobbies-pic{
     display: flex;
-    /* width: 100%; */
     justify-content: center;
-    gap: 40px;
 }
 
 .hobbies-pic img{
@@ -262,7 +264,7 @@ footer{
 
 }
 
-@media (max-width: 1150px) and (min-width:550px){
+@media (max-width: 1220px) and (min-width:550px){
         
     .hobbies-pic {
         flex-wrap: wrap;
