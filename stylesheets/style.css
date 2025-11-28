@@ -234,6 +234,10 @@ footer{
         margin-top: 30px;
     }
 
+    table, th, td{
+        font-size: 1.1rem;
+    }
+
     #intrest ul {
         font-size: 1.1rem;
     }
