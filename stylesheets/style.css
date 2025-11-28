@@ -244,7 +244,7 @@ footer{
 
     .hobbies-pic img{
         width: 100%;
-        justify-self: anchor-center;
+        /* justify-self: anchor-center; */
     } 
 
     .footer-info a {
@@ -274,7 +274,7 @@ footer{
 
     .hobbies-pic img{
         /* width: 100%; */
-        justify-self: anchor-center;
+        /* justify-self: anchor-center; */
     }
 }
     
