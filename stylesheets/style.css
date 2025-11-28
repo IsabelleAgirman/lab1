@@ -11,6 +11,8 @@ h1{
     font-family: cursive;
     font-variant: petite-caps; /*make small all caps*/
     animation: slide-in 1000ms; /*slides in 1 sek*/
+    z-index: -1; /*allways under nagigation(sticky) even during animantion*/
+    position: relative; /*needed for z-index to work*/
 }
 
 @keyframes slide-in {
