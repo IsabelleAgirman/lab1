@@ -172,16 +172,17 @@ input:focus, #Message:focus {
     margin-top: 10px;
 }
 
-#subBtn{
+#subBtn, #clearBtn{
     background-color: #a8c3ff;
     padding: 10px 40px;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 10px;
     border-color: #6c9aff36;
+    margin: 10px 20px;
 }
 
-#subBtn:hover{
+#subBtn:hover, #clearBtn:hover{
     background-color: #6c9aff;
     color: white;
 }
