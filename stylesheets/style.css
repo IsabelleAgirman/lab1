@@ -157,7 +157,7 @@ input:focus, #Message:focus {
   background-color: #c9c9c9;
 }
 
-#Name, #eMail{
+#Firstname, #Lastname, #Subject, #telNr, #eMail{
     font-size: 1em;
     padding: 2px 10px;
     margin-top: 10px;
