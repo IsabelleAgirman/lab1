@@ -71,7 +71,7 @@ form.addEventListener("submit", function (event) {
     
     event.preventDefault(); //prevent page loading
 
-    let valid = validateName(firstName);
+    let valid = validateName(firstName) & validateName(lastName);
 
     if(valid) return;
 })
