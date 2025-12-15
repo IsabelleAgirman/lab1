@@ -36,12 +36,17 @@ function validateName(input){
     const regex =  /^[A-Za-zÅÄÖåäö]+$/;
 
     console.log("test0");
-    if(!regex.test(input.value.trim())) {
+    if(input.value.length === 0){
+        showError(input, "Can not be empty!")
+        return false;
+    }
+    else if(!regex.test(input.value.trim())) {
         console.log("test1");
         showError(input, "Only letters allowed!");
         console.log("test2");
         return false;
     }
+    
 
     clearError(input);
     input.classList.add("valid");
@@ -49,7 +54,23 @@ function validateName(input){
 }
 
 //Check if email format is valid (contains @ and domain)
-//validateEmail()
+function validateEmail(){
+    console.log("email0");
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log("email1");
+    if (!regex.test(email.value.trim())) {
+
+        console.log("email2");
+        showError(email, "Enter a valid email address!");
+        return false;
+    }
+
+    console.log("email3");
+    clearError(email);
+    email.classList.add("valid");
+    console.log("email4");
+    return true;
+}
 
 
 //Check if message is at least 20 characters long
@@ -71,7 +92,9 @@ form.addEventListener("submit", function (event) {
     
     event.preventDefault(); //prevent page loading
 
-    let valid = validateName(firstName) & validateName(lastName);
+    let valid = validateName(firstName) & 
+                validateName(lastName) &
+                validateEmail();
 
     if(valid) return;
 })
