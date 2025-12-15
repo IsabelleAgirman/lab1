@@ -74,8 +74,40 @@ function validateEmail(){
 
 
 //Check if message is at least 20 characters long
-//validateMessage()
+function validateMessage() {
 
+    if(message.value.trim().length < 20){
+        showError(message, "Your message must contain at least 20 characters.");
+        return false;
+    }
+
+    message.classList.add("valid");
+    return true;
+}
+
+
+const counter = document.createElement("small");
+counter.id = "charCounter";
+counter.style.display = "block";
+counter.style.marginTop = "5px";
+message.parentElement.appendChild(counter);
+
+function updateCounter() {
+
+    const length = message.value.length;
+    counter.textContent = `${length} / 20 characters`;
+    
+    if(length < 20) {
+        counter.style.color = "red";
+    } 
+    else {
+        counter.style.color = "green";
+    }
+}
+
+message.addEventListener("input", updateCounter);
+
+updateCounter();
 
 //Display error message below the field
 //showError()
@@ -92,9 +124,10 @@ form.addEventListener("submit", function (event) {
     
     event.preventDefault(); //prevent page loading
 
-    let valid = validateName(firstName) & 
-                validateName(lastName) &
-                validateEmail();
+    let valid = validateName(firstName) && 
+                validateName(lastName) &&
+                validateEmail() &&
+                validateMessage();
 
-    if(valid) return;
-})
+    if(!valid) return;
+});
