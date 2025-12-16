@@ -143,5 +143,13 @@ form.addEventListener("submit", function (event) {
 
     if(!valid) return;
 
+    const successMsg = document.createElement("p");
+    successMsg.classList.add("success-message");
+    successMsg.textContent = `Thank you ${firstName.value}! I will contact you soon!`;
+
+    form.appendChild(successMsg);
+
+    setTimeout(() => successMsg.remove(), 3000); //disapear after 3sek
+
     clearForm();
 });
