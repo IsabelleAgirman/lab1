@@ -5,6 +5,7 @@ const firstName = document.getElementById("Firstname");
 const lastName = document.getElementById("Lastname");
 const email = document.getElementById("eMail");
 const message = document.getElementById("Message");
+//const phone = document.getElementById("telNr");
 
 const submitBtn = document.getElementById("subBtn");
 
@@ -118,7 +119,18 @@ updateCounter();
 
 
 //Clear all form fields after successful submission
-//clearForm()
+function clearForm() {
+    console.log("clear1");
+    form.reset();
+    [firstName, lastName, email, message].forEach(input => {
+        console.log("clear2");
+        clearError(input);
+        console.log("clear3");
+        input.classList.remove("valid");
+    });
+    console.log("clear4");
+    updateCounter();
+}
 
 form.addEventListener("submit", function (event) {
     
@@ -130,4 +142,6 @@ form.addEventListener("submit", function (event) {
                 validateMessage();
 
     if(!valid) return;
+
+    clearForm();
 });
