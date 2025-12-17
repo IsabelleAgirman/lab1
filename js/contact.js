@@ -9,6 +9,7 @@ const message = document.getElementById("Message");
 
 const submitBtn = document.getElementById("subBtn");
 
+//Display error message below the field
 function showError(input, message){
     clearError(input);
 
@@ -20,6 +21,7 @@ function showError(input, message){
     input.parentElement.appendChild(error);
 }
 
+//Remove error message when field is valid
 function clearError(input){
     input.classList.remove("error");
     input.classList.remove("valid");
@@ -36,15 +38,12 @@ function validateName(input){
     
     const regex =  /^[A-Za-zÅÄÖåäö]+$/;
 
-    console.log("test0");
     if(input.value.length === 0){
         showError(input, "Can not be empty!")
         return false;
     }
     else if(!regex.test(input.value.trim())) {
-        console.log("test1");
         showError(input, "Only letters allowed!");
-        console.log("test2");
         return false;
     }
     
@@ -56,20 +55,16 @@ function validateName(input){
 
 //Check if email format is valid (contains @ and domain)
 function validateEmail(){
-    console.log("email0");
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    console.log("email1");
-    if (!regex.test(email.value.trim())) {
 
-        console.log("email2");
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regex.test(email.value.trim())) {
         showError(email, "Enter a valid email address!");
         return false;
     }
 
-    console.log("email3");
     clearError(email);
     email.classList.add("valid");
-    console.log("email4");
     return true;
 }
 
@@ -110,25 +105,13 @@ message.addEventListener("input", updateCounter);
 
 updateCounter();
 
-//Display error message below the field
-//showError()
-
-
-//Remove error message when field is valid
-//clearError()
-
-
 //Clear all form fields after successful submission
 function clearForm() {
-    console.log("clear1");
     form.reset();
     [firstName, lastName, email, message].forEach(input => {
-        console.log("clear2");
         clearError(input);
-        console.log("clear3");
         input.classList.remove("valid");
     });
-    console.log("clear4");
     updateCounter();
 }
 
