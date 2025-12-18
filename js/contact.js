@@ -1,5 +1,6 @@
 
 const form = document.querySelector("form");
+const fieldset =document.querySelector("fieldset");
 
 const firstName = document.getElementById("Firstname");
 const lastName = document.getElementById("Lastname");
@@ -133,11 +134,15 @@ form.addEventListener("submit", function (event) {
 
     if(!valid) return;
 
+    //mailto 
+    window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=Contact from ${firstName.value}
+                            &body=${encodeURIComponent(message.value)}`;
+
     const successMsg = document.createElement("p");
     successMsg.classList.add("success-message");
     successMsg.textContent = `Thank you ${firstName.value}! I will contact you soon!`;
 
-    form.appendChild(successMsg);
+    fieldset.appendChild(successMsg);
 
     setTimeout(() => successMsg.remove(), 3000); //disapear after 3sek
 
