@@ -11,6 +11,13 @@
     font-size: 0.85rem;
 }
 
+input.valid, textarea.valid{
+    border-color: #28a745;
+}
+
+input.error, textarea.error {
+    border-color: #dc3545;
+}
 
 .succses-message {
     color: #28a745;
