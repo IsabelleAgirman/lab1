@@ -119,10 +119,17 @@ form.addEventListener("submit", function (event) {
     
     event.preventDefault(); //prevent page loading
 
-    let valid = validateName(firstName) && 
+    const fnameValid = validateName(firstName);
+    const lnameValid = validateName(lastName);
+    const emailValid = validateEmail();
+    const messageValid = validateMessage();
+
+    const valid = fnameValid && lnameValid && emailValid && messageValid;
+
+    /*let valid = validateName(firstName) && 
                 validateName(lastName) &&
                 validateEmail() &&
-                validateMessage();
+                validateMessage();*/
 
     if(!valid) return;
 
