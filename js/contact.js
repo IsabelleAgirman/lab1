@@ -7,7 +7,7 @@ const lastName = document.getElementById("Lastname");
 const email = document.getElementById("eMail");
 const message = document.getElementById("Message");
 const subject = document.getElementById("Subject");
-//const phone = document.getElementById("telNr");
+const phone = document.getElementById("telNr");
 
 const submitBtn = document.getElementById("subBtn");
 
@@ -138,7 +138,9 @@ form.addEventListener("submit", function (event) {
 
     //mailto 
     window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=${subject.value}
-                            &body=${encodeURIComponent(message.value)}`;
+                            &body=${encodeURIComponent(message.value)} %0D%0A
+                            Name: ${firstName.value} ${lastName.value} %0D%0A
+                            Tel: ${phone.value}`;
 
     const successMsg = document.createElement("p");
     successMsg.classList.add("success-message");
