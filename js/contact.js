@@ -6,6 +6,7 @@ const firstName = document.getElementById("Firstname");
 const lastName = document.getElementById("Lastname");
 const email = document.getElementById("eMail");
 const message = document.getElementById("Message");
+const subject = document.getElementById("Subject");
 //const phone = document.getElementById("telNr");
 
 const submitBtn = document.getElementById("subBtn");
@@ -136,7 +137,7 @@ form.addEventListener("submit", function (event) {
     if(!valid) return;
 
     //mailto 
-    window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=Contact from ${firstName.value}
+    window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=${subject.value}
                             &body=${encodeURIComponent(message.value)}`;
 
     const successMsg = document.createElement("p");
