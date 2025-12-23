@@ -87,8 +87,6 @@ function validateMessage() {
 
 const counter = document.createElement("small");
 counter.id = "charCounter";
-//counter.style.display = "block";
-//counter.style.marginTop = "5px";
 message.parentElement.appendChild(counter);
 
 function updateCounter() {
@@ -128,11 +126,6 @@ form.addEventListener("submit", function (event) {
     const messageValid = validateMessage();
 
     const valid = fnameValid && lnameValid && emailValid && messageValid;
-
-    /*let valid = validateName(firstName) && 
-                validateName(lastName) &&
-                validateEmail() &&
-                validateMessage();*/
 
     if(!valid) return;
 
