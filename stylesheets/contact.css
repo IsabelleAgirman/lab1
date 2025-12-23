@@ -36,3 +36,20 @@ input.error, textarea.error {
 
 }
 
+fieldset p {
+    display: grid;
+    justify-self: left;
+}
+
+fieldset p:last-of-type {
+    display: flex;
+    
+}
+
+@media (max-width: 460px){
+
+    fieldset p:last-of-type {
+    display: grid;
+    justify-self: center;
+    }
+}
