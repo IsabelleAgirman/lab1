@@ -3,12 +3,21 @@
     font-size: 0.85rem;
     margin-top: 3px;
     display: block;
-    /*animation*/
+    animation: fradeInOut 7s;
+    opacity: 0;
 }
 
+@keyframes fradeInOut {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
 
 #charCounter {
     font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
 }
 
 input.valid, textarea.valid{
@@ -24,7 +33,6 @@ input.error, textarea.error {
     font-size: 1rem;
     margin-top: 10px;
     text-align: center;
-    /*animation*/
 
 }
 

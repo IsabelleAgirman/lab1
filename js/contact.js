@@ -78,6 +78,7 @@ function validateMessage() {
         return false;
     }
 
+    clearError(message);
     message.classList.add("valid");
     return true;
 }
@@ -85,8 +86,8 @@ function validateMessage() {
 
 const counter = document.createElement("small");
 counter.id = "charCounter";
-counter.style.display = "block";
-counter.style.marginTop = "5px";
+//counter.style.display = "block";
+//counter.style.marginTop = "5px";
 message.parentElement.appendChild(counter);
 
 function updateCounter() {
