@@ -9,7 +9,8 @@ const message = document.getElementById("Message");
 const subject = document.getElementById("Subject");
 const phone = document.getElementById("telNr");
 
-const submitBtn = document.getElementById("subBtn");
+//const submitBtn = document.getElementById("subBtn");
+//const resetBtn = document.getElementById("clearBtn");
 
 //Display error message below the field
 function showError(input, message){
@@ -113,7 +114,10 @@ function clearForm() {
         clearError(input);
         input.classList.remove("valid");
     });
-    updateCounter();
+    setTimeout(() => {
+       updateCounter(); 
+    }, 100);
+    
 }
 
 form.addEventListener("submit", function (event) {
@@ -144,4 +148,9 @@ form.addEventListener("submit", function (event) {
     setTimeout(() => successMsg.remove(), 3000); //disapear after 3sek
 
     clearForm();
+});
+
+form.addEventListener("reset", function(event){
+    clearForm();    
+
 });

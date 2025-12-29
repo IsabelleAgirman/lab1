@@ -28,6 +28,10 @@ input.error, textarea.error {
     border-color: #dc3545;
 }
 
+input:focus, #Message:focus {
+    border: 3px solid rgb(0, 0, 255);
+}
+
 .succses-message {
     color: #28a745;
     font-size: 1rem;
