@@ -9,12 +9,10 @@ const message = document.getElementById("Message");
 const subject = document.getElementById("Subject");
 const phone = document.getElementById("telNr");
 
-//const submitBtn = document.getElementById("subBtn");
-//const resetBtn = document.getElementById("clearBtn");
 
 //Display error message below the field
 function showError(input, message){
-    clearError(input);
+    clearError(input); //remove old error-messages
 
     const error = document.createElement("small");
     error.classList.add("error-text");
@@ -24,7 +22,7 @@ function showError(input, message){
     input.parentElement.appendChild(error);
 }
 
-//Remove error message when field is valid
+//Clear error/valid 
 function clearError(input){
     input.classList.remove("error");
     input.classList.remove("valid");
@@ -39,8 +37,9 @@ function clearError(input){
 //Check if name contains only letters (no numbers or special characters)
 function validateName(input){
     
-    const regex =  /^[A-Za-zÅÄÖåäö]+$/;
+    const regex =  /^[A-Za-zÅÄÖåäö]+$/; //allow letters a-ö
 
+    //cheack that name is not empty
     if(input.value.length === 0){
         showError(input, "Can not be empty!")
         return false;
@@ -50,7 +49,7 @@ function validateName(input){
         return false;
     }
     
-
+    //If everything is correct, clear error and mark as valid
     clearError(input);
     input.classList.add("valid");
     return true;
@@ -88,12 +87,12 @@ function validateMessage() {
 
 const counter = document.createElement("small");
 counter.id = "charCounter";
-message.parentElement.appendChild(counter);
+message.parentElement.appendChild(counter); //Place counter under textarea
 
 function updateCounter() {
 
-    const length = message.value.length;
-    counter.textContent = `${length} / 20 characters`;
+    const length = message.value.length; //Get numner of characters in textarea
+    counter.textContent = `${length} / 20 characters`; //Show number of characters
     
     if(length < 20) {
         counter.style.color = "red";
@@ -103,17 +102,21 @@ function updateCounter() {
     }
 }
 
+//Run func every time user types in textarea
 message.addEventListener("input", updateCounter);
 
+//Run directly on page load so counter is displayed from the beginning
 updateCounter();
 
-//Clear all form fields after successful submission
+//Clear all form fields and resets error/valid status
 function clearForm() {
     form.reset();
     [firstName, lastName, email, message].forEach(input => {
         clearError(input);
         input.classList.remove("valid");
     });
+
+    //Wait a little befor the counter is updated (to allow time for the reset to run)
     setTimeout(() => {
        updateCounter(); 
     }, 100);
@@ -124,14 +127,15 @@ form.addEventListener("submit", function (event) {
     
     event.preventDefault(); //prevent page loading
 
+    //Validate each field
     const fnameValid = validateName(firstName);
     const lnameValid = validateName(lastName);
     const emailValid = validateEmail();
     const messageValid = validateMessage();
 
-    const valid = fnameValid && lnameValid && emailValid && messageValid;
+    const valid = fnameValid && lnameValid && emailValid && messageValid; //is true if all is valid
 
-    if(!valid) return;
+    if(!valid) return; //Cancle submit if something is wrong
 
     //mailto 
     window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=${subject.value}
@@ -150,6 +154,7 @@ form.addEventListener("submit", function (event) {
     clearForm();
 });
 
+//Clear form when user click on reset-button
 form.addEventListener("reset", function(event){
     clearForm();    
 

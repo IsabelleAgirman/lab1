@@ -3,8 +3,8 @@
     font-size: 0.85rem;
     margin-top: 3px;
     display: block;
-    animation: fradeInOut 7s;
-    opacity: 0;
+    animation: fradeInOut 7s; /*Animation, fades in and out*/
+    opacity: 0; /*Start invisible*/
 }
 
 @keyframes fradeInOut {
@@ -50,6 +50,7 @@ fieldset p {
     
 }
 
+/*Small screen*/
 @media (max-width: 460px){
 
     #formBtn {
