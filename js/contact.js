@@ -116,7 +116,7 @@ function clearForm() {
         input.classList.remove("valid");
     });
 
-    //Wait a little befor the counter is updated (to allow time for the reset to run)
+    //Wait a little before the counter is updated (to allow time for the reset to run)
     setTimeout(() => {
        updateCounter(); 
     }, 100);
@@ -135,7 +135,7 @@ form.addEventListener("submit", function (event) {
 
     const valid = fnameValid && lnameValid && emailValid && messageValid; //is true if all is valid
 
-    if(!valid) return; //Cancle submit if something is wrong
+    if(!valid) return; //Cancel submit if something is wrong
 
     //mailto 
     window.location.href = `mailto:isabelle.agirman0002@stud.hkr.se?subject=${subject.value}
