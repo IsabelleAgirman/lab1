@@ -40,9 +40,20 @@ input:focus, #Message:focus {
 
 }
 
+fieldset{
+    padding: 10px 100px;
+}
+
 fieldset p {
     display: grid;
-    justify-self: left;
+}
+
+#Subject{
+    width: 150px;
+}
+
+.contact{
+    justify-items: center;
 }
 
 #formBtn {
@@ -50,11 +61,24 @@ fieldset p {
     
 }
 
-/*Small screen*/
+/*responsiv design*/
 @media (max-width: 460px){
 
     #formBtn {
     display: grid;
     justify-self: center;
+    }
+}
+
+/*responsiv design*/
+@media (max-width: 701px){
+
+    fieldset {
+        padding: 10px 30px;
+    }
+    
+    .footer-info {
+        display: grid;
+        justify-items: center;
     }
 }

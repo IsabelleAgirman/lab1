@@ -165,8 +165,8 @@ input:focus, #Message:focus {
 
 #Message{
     line-height: 3;
-    width: 240px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
     padding: 2px 10px;
     font-size: 1em;
     margin-top: 10px;
@@ -264,15 +264,6 @@ footer{
 
     fieldset p{
         margin: 20px;
-    }
-
-    #Message{
-        width: 270px;
-    }
-
-    .footer-info {
-        display: grid;
-        justify-items: center;
     }
 
 }
