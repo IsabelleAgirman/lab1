@@ -32,7 +32,7 @@ input:focus, #Message:focus {
     border: 3px solid rgb(0, 0, 255);
 }
 
-.succses-message {
+.success-message {
     color: #28a745;
     font-size: 1rem;
     margin-top: 10px;
