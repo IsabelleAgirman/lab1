@@ -74,7 +74,7 @@ function validateEmail(){
 //Check if message is at least 20 characters long
 function validateMessage() {
 
-    if(message.value.trim().length < 20){
+    if(message.value.trim().length < 30){
         showError(message, "Your message must contain at least 20 characters.");
         return false;
     }
