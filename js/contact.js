@@ -74,7 +74,7 @@ function validateEmail(){
 //Check if message is at least 20 characters long
 function validateMessage() {
 
-    if(message.value.trim().length < 30){
+    if(message.value.trim().length > 31){
         showError(message, "Your message must contain at least 20 characters.");
         return false;
     }
@@ -92,9 +92,9 @@ message.parentElement.appendChild(counter); //Place counter under textarea
 function updateCounter() {
 
     const length = message.value.length; //Get numner of characters in textarea
-    counter.textContent = `${length} / 20 characters`; //Show number of characters
+    counter.textContent = `${length} / 30 characters`; //Show number of characters
     
-    if(length < 20) {
+    if(length > 31) {
         counter.style.color = "red";
     } 
     else {
